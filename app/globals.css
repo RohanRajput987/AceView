@@ -210,10 +210,19 @@
   }
 
   .call-view {
-    @apply flex sm:flex-row flex-col gap-10 items-center justify-between w-full;
+    @apply flex sm:flex-row flex-col gap-10 items-center justify-center w-full;
 
     h3 {
       @apply text-center text-primary-100 mt-5;
+    }
+
+    .card-interview {
+      @apply dark-gradient rounded-2xl flex-1 sm:basis-1/2 w-full h-100 flex flex-col items-center justify-center p-6 relative overflow-visible;
+
+      .avatar {
+        @apply relative flex items-center justify-center rounded-full w-[120px] h-[120px] overflow-hidden border-4 border-primary-200;
+        box-shadow: 0 0 30px rgba(202, 197, 254, 0.6), inset 0 0 20px rgba(202, 197, 254, 0.2);
+      }
     }
 
     .card-interviewer {
@@ -221,7 +230,7 @@
     }
 
     .avatar {
-      @apply z-10 flex items-center justify-center blue-gradient rounded-full size-30 relative;
+      @apply z-10 flex items-center justify-center rounded-full relative;
 
       .animate-speak {
         @apply absolute inline-flex size-5/6 animate-ping rounded-full bg-primary-200 opacity-75;
